@@ -1,13 +1,23 @@
 <html>
   <head>
-    <title>Hello, world!</title>
+    <title>Scientific Calculator</title>
     <link rel="stylesheet" type="text/css" href="/css/style.css">
   </head>
   <body>
-    <h1>Hello, world!</h1>
-    <p>
-      This is a simple static HTML file that will be served from Google App
-      Engine.
-    </p>
+    <div id="container">
+		<div class="screen">
+			<input type="text" id="scn" size="20" readonly>
+		</div>
+		
+		<div class="btns">
+			<p>
+				<input type="button" value="1" class="button silver">
+				<input type="button" value="2" class="button silver">
+				<input type="button" value="3" class="button silver">
+				<input type="button" value="+" class="button silver">
+				<input type="button" value="-" class="button silver">
+			</p>
+		</div>
+	</div>
   </body>
 </html>
