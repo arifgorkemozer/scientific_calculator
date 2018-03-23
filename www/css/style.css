@@ -2,13 +2,13 @@ body {
      background: white;
 }
  .calculator {
-     width: 430px;
+     width: 860px;
      background-color: #515151;
      padding: 20px;
      font-family: Verdana, Sans-serif;
 }
  input[type=text] {
-     width: 420px;
+     width: 840px;
      height: 75px;
      border-radius: 0px;
      border: 0px;

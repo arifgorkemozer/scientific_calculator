@@ -3,10 +3,11 @@ var buttons = document.getElementsByClassName("button");
 
 Array.prototype.forEach.call(buttons, function(button) {
     button.addEventListener("click", function() {
+		//debugger;
         if (button.textContent != "=" &&
             button.textContent != "CE" &&
-            button.textContent != "x" &&
-            button.textContent != "÷" &&
+            button.textContent != "*" &&
+            button.textContent != "/" &&
             button.textContent != "sqrt" &&
             button.textContent != "x^2" &&
             button.textContent != "%" &&
@@ -19,30 +20,30 @@ Array.prototype.forEach.call(buttons, function(button) {
             button.textContent != "ln" &&
             button.textContent != "x^" &&
             button.textContent != "x !" &&
-            button.textContent != "π" &&
+            button.textContent != "pi" &&
             button.textContent != "e" &&
             button.textContent != "rad" && button.textContent != "deg") 
 		{
             display.value += button.textContent;
-        } else if (button.textContent === "=") {
+        } else if (button.textContent === "=") { //+
             equals();
-        } else if (button.textContent === "CE") {
+        } else if (button.textContent === "CE") { //+
             clear();
-        } else if (button.textContent === "x") {
+        } else if (button.textContent === "*") { //+
             multiply();
-        } else if (button.textContent === "÷") {
+        } else if (button.textContent === "/") { //+
             divide();
-        } else if (button.textContent === "+/-") {
+        } else if (button.textContent === "+/-") { //+
             plusMinus();
-        } else if (button.textContent === "<=") {
+        } else if (button.textContent === "<=") { //+
             backspace();
-        } else if (button.textContent === "%") {
+        } else if (button.textContent === "%") { //+
             percent();
-        } else if (button.textContent === "π") {
+        } else if (button.textContent === "pi") { //+
             pi();
-        } else if (button.textContent === "x^2") {
+        } else if (button.textContent === "x^2") {//+
             square();
-        } else if (button.textContent === "sqrt") {
+        } else if (button.textContent === "sqrt") { //+
             squareRoot();
         } else if (button.textContent === "sin") {
             sin();
@@ -59,7 +60,7 @@ Array.prototype.forEach.call(buttons, function(button) {
         } else if (button.textContent === "x !") {
             factorial();
         } else if (button.textContent === "e") {
-            exp();
+            eulersNumber();
         } else if (button.textContent === "rad") {
             radians();
         } else if (button.textContent === "deg") {
@@ -82,9 +83,10 @@ function equals() {
         var exponent = (display.value).slice((display.value).indexOf("^") + 1);
         display.value = eval("Math.pow(" + base + "," + exponent + ")");
     } else {
-        display.value = eval(display.value)
-        checkLength()
-        syntaxError()
+		
+		display.value = eval(display.value);
+        //checkLength();
+        syntaxError();
     }
 }
 
@@ -128,7 +130,11 @@ function factorial() {
 }
 
 function pi() {
-    display.value = (display.value * Math.PI);
+	display.value += (Math.PI).toString();
+}
+
+function eulersNumber() {
+	display.value += (Math.E).toString();
 }
 
 function square() {
