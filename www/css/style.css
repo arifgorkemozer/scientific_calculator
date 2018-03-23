@@ -5,9 +5,8 @@ body {
      width: 430px;
      background-color: #515151;
      padding: 20px;
-	 font-family: Verdana, Sans-serif;
+     font-family: Verdana, Sans-serif;
 }
-
  input[type=text] {
      width: 420px;
      height: 75px;
@@ -15,9 +14,9 @@ body {
      border: 0px;
      background-color: white;
      color: black;
-	 margin: 0 0px 20px 0px;
-	 font-size: 25px;
-	 font-family: Verdana, Sans-serif;
+     margin: 0 0px 20px 0px;
+     font-size: 25px;
+     font-family: Verdana, Sans-serif;
 }
  .button {
      margin: 0px;
@@ -27,23 +26,22 @@ body {
      border-radius: 0px;
      color: #000000;
      cursor: pointer;
-	 font-family: Verdana, Sans-serif;
+     font-family: Verdana, Sans-serif;
 }
  button:hover {
      background-color: orange;
      transition: .2s;
-	 font-family: Verdana, Sans-serif;
+     font-family: Verdana, Sans-serif;
 }
-
  .numbers {
      background-color: #efefef;
-	 font-family: Verdana, Sans-serif;
+     font-family: Verdana, Sans-serif;
 }
  .basic-stuff {
      background-color: #b5b5b5;
-	 font-family: Verdana, Sans-serif;
+     font-family: Verdana, Sans-serif;
 }
  .complex-stuff {
      background-color: #828282;
-	 font-family: Verdana, Sans-serif;
+     font-family: Verdana, Sans-serif;
 }
