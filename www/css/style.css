@@ -3,7 +3,7 @@ body {
 }
  .calculator {
      width: 860px;
-     background-color: #515151;
+     background-color: #002991;
      padding: 20px;
      font-family: Verdana, Sans-serif;
 }
@@ -17,6 +17,7 @@ body {
      margin: 0 0px 20px 0px;
      font-size: 25px;
      font-family: Verdana, Sans-serif;
+	 text-align: right;
 }
  .button {
      margin: 0px;
@@ -29,19 +30,21 @@ body {
      font-family: Verdana, Sans-serif;
 }
  button:hover {
-     background-color: orange;
+     background-color: #ff9d00;
      transition: .2s;
      font-family: Verdana, Sans-serif;
+	 color: #ffffff;
 }
  .numbers {
-     background-color: #efefef;
+     background-color: #99ccff;
      font-family: Verdana, Sans-serif;
+	  font-weight: bold;
 }
  .basic-stuff {
-     background-color: #b5b5b5;
+     background-color: #3fa0ff;
      font-family: Verdana, Sans-serif;
 }
  .complex-stuff {
-     background-color: #828282;
+     background-color: #0281ff;
      font-family: Verdana, Sans-serif;
 }

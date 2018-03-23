@@ -3,7 +3,7 @@ var buttons = document.getElementsByClassName("button");
 
 Array.prototype.forEach.call(buttons, function(button) {
     button.addEventListener("click", function() {
-		//debugger;
+		//
         if (button.textContent != "=" &&
             button.textContent != "CE" &&
             button.textContent != "*" &&
@@ -25,45 +25,45 @@ Array.prototype.forEach.call(buttons, function(button) {
             button.textContent != "rad" && button.textContent != "deg") 
 		{
             display.value += button.textContent;
-        } else if (button.textContent === "=") { //+
+        } else if (button.textContent === "=") { 
             equals();
-        } else if (button.textContent === "CE") { //+
+        } else if (button.textContent === "CE") { 
             clear();
-        } else if (button.textContent === "*") { //+
+        } else if (button.textContent === "*") { 
             multiply();
-        } else if (button.textContent === "/") { //+
+        } else if (button.textContent === "/") { 
             divide();
-        } else if (button.textContent === "+/-") { //+
+        } else if (button.textContent === "+/-") { 
             plusMinus();
-        } else if (button.textContent === "<=") { //+
+        } else if (button.textContent === "<=") { 
             backspace();
-        } else if (button.textContent === "%") { //+
+        } else if (button.textContent === "%") { 
             percent();
-        } else if (button.textContent === "pi") { //+
+        } else if (button.textContent === "pi") { 
             pi();
-        } else if (button.textContent === "x^2") {//+
+        } else if (button.textContent === "x^2") {
             square();
-        } else if (button.textContent === "sqrt") { //+
+        } else if (button.textContent === "sqrt") { 
             squareRoot();
-        } else if (button.textContent === "sin") {
+        } else if (button.textContent === "sin") { 
             sin();
-        } else if (button.textContent === "cos") {
+        } else if (button.textContent === "cos") { 
             cos();
-        } else if (button.textContent === "tan") {
+        } else if (button.textContent === "tan") { 
             tan();
-        } else if (button.textContent === "log") {
+        } else if (button.textContent === "log") { 
             log();
-        } else if (button.textContent === "ln") {
+        } else if (button.textContent === "ln") { 
             ln();
-        } else if (button.textContent === "x^") {
+        } else if (button.textContent === "x^") { 
             exponent();
         } else if (button.textContent === "x !") {
             factorial();
         } else if (button.textContent === "e") {
             eulersNumber();
-        } else if (button.textContent === "rad") {
+        } else if (button.textContent === "rad") { 
             radians();
-        } else if (button.textContent === "deg") {
+        } else if (button.textContent === "deg") { 
             degrees();
         }
     });
@@ -85,7 +85,6 @@ function equals() {
     } else {
 		
 		display.value = eval(display.value);
-        //checkLength();
         syntaxError();
     }
 }
@@ -119,10 +118,19 @@ function factorial() {
     if (display.value === 0) {
         display.value = "1";
     } else if (display.value < 0) {
-        display.value = "undefined";
+        display.value = "Undefined";
     } else {
         var number = 1;
-        for (var i = display.value; i > 0; i--) {
+		var castedNumber = 1;
+		
+		if ((display.value * 10) % 10 < 5) {
+			castedNumber = Math.floor(display.value);
+		}
+		else {
+			castedNumber = Math.ceil(display.value);
+		}
+		
+        for (var i = castedNumber; i > 1; i--) {
             number *= i;
         }
         display.value = number;
@@ -178,9 +186,9 @@ function exp() {
 }
 
 function radians() {
-    display.value = display.value * (Math.PI / 180);
+    display.value = (display.value / 180) * Math.PI;
 }
 
 function degrees() {
-    display.value = display.value * (180 / Math.PI);
+    display.value = (display.value / Math.PI) * 180;
 }
